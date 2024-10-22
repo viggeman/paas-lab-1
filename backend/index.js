@@ -11,7 +11,7 @@ app.get('/api', (_request, response) => {
   response.send({ hello: 'World' });
 });
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(path.resolve(), 'dist')));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
