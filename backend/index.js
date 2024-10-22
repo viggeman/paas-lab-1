@@ -11,8 +11,7 @@ app.get('/api', (_request, response) => {
   response.send({ hello: 'World' });
 });
 
-// Servera statiska filer från Next.js 'dist'-mapp (mer om detta senare)
-app.use(express.static(path.join(path.resolve(), 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
